@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savik | uongx yasiyungu - 個人樂舞空間</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --apple-red: #fa243c;
+            --apple-dark: #1d1d1f;
+            --apple-gray: #f5f5f7;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+        body { background-color: white; color: var(--apple-dark); overflow-x: hidden; }
+
+        /* 頂部導航 */
+        nav {
+            position: fixed; top: 0; width: 100%; height: 44px;
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px);
+            z-index: 1000; border-bottom: 1px solid #d2d2d7;
+            display: flex; justify-content: center; align-items: center;
+        }
+
+        /* 英雄封面區 */
+        .hero {
+            height: 70vh; background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), 
+            url('https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&q=80&w=2069') no-repeat center center/cover;
+            display: flex; flex-direction: column; justify-content: flex-end; padding: 40px; color: white;
+        }
+
+        .hero h1 { font-size: 3.5rem; font-weight: 700; letter-spacing: -1px; }
+        .hero p { font-size: 1.2rem; margin-top: 10px; opacity: 0.9; }
+
+        /* 主要內容區 */
+        main { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        section { margin-bottom: 60px; }
+        h2 { font-size: 1.8rem; font-weight: 600; margin-bottom: 25px; border-bottom: 1px solid #e5e5e5; padding-bottom: 10px; }
+
+        /* 橫向滑動卡片 */
+        .scroll-container {
+            display: flex; overflow-x: auto; gap: 20px; padding-bottom: 20px;
+            scrollbar-width: none; -ms-overflow-style: none;
+        }
+        .scroll-container::-webkit-scrollbar { display: none; }
+
+        .card {
+            min-width: 200px; height: 280px; border-radius: 12px;
+            background: var(--apple-gray); overflow: hidden;
+            transition: transform 0.3s ease; position: relative;
+        }
+        .card:hover { transform: scale(1.03); }
+        .card img { width: 100%; height: 70%; object-fit: cover; }
+        .card-info { padding: 12px; }
+        .card-title { font-weight: 600; font-size: 0.95rem; }
+        .card-sub { font-size: 0.85rem; color: #86868b; margin-top: 4px; }
+
+        /* 個人簡介卡片 */
+        .profile-box {
+            background: var(--glass-bg); backdrop-filter: blur(10px);
+            border-radius: 20px; padding: 30px; border: 1px solid rgba(0,0,0,0.1);
+            display: grid; grid-template-columns: 1fr 2fr; gap: 40px;
+        }
+        .tags { display: flex; gap: 10px; margin-top: 15px; }
+        .tag { background: var(--apple-red); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
+
+        footer { text-align: center; padding: 40px; background: var(--apple-gray); color: #86868b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<nav><i class="fab fa-apple" style="font-size: 1.2rem;"></i></nav>
+
+<section class="hero">
+    <p>鄒族舞者 | 文化傳承者</p>
+    <h1>安俊翰 Savik</h1>
+    <p>uongx yasiyungu</p>
+</section>
+
+<main>
+    <section>
+        <h2>現在就聽 (Listen Now)</h2>
+        <div class="profile-box">
+            <div style="text-align: center;">
+                <div style="width: 150px; height: 150px; background: #ddd; border-radius: 50%; margin: 0 auto; overflow: hidden;">
+                    <i class="fas fa-user" style="font-size: 5rem; margin-top: 30px; color: #aaa;"></i>
+                </div>
+                <div class="tags">
+                    <span class="tag">#跳舞</span>
+                    <span class="tag">#唱歌</span>
+                    <span class="tag">#文化傳承</span>
+                </div>
+            </div>
+            <div>
+                <h3>追求卓越的文化舞者</h3>
+                <p style="margin-top: 15px; line-height: 1.6; color: #424245;">
+                    我來自山美部落，在部落教室的薰陶下成長。對我而言，舞蹈不只是表演，更是傳承鄒族文化的生命。
+                    曾任輔仁中學原青社團長，現正致力於原住民族樂舞與藝術的深造，志向是成為一名將傳統文化帶回部落的老師。
+                </p>
+                <div style="margin-top: 20px; display: flex; gap: 30px;">
+                    <div><strong>生日</strong><br>2005.03.21</div>
+                    <div><strong>族別</strong><br>鄒族 (Cou)</div>
+                    <div><strong>能力</strong><br>族語認證中級</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>演出與活動歷程 (Recently Played)</h2>
+        <div class="scroll-container">
+            <div class="card">
+                <div style="height:70%; background:#ff4b2b; display:flex; align-items:center; justify-content:center; color:white;"><i class="fas fa-mask fa-3x"></i></div>
+                <div class="card-info">
+                    <div class="card-title">達娜伊谷舞蹈團</div>
+                    <div class="card-sub">山美部落文化演出</div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="height:70%; background:#ff9068; display:flex; align-items:center; justify-content:center; color:white;"><i class="fas fa-music fa-3x"></i></div>
+                <div class="card-info">
+                    <div class="card-title">山美muni音樂祭</div>
+                    <div class="card-sub">年度樂舞演出</div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="height:70%; background:#1d1d1f; display:flex; align-items:center; justify-content:center; color:white;"><i class="fas fa-users fa-3x"></i></div>
+                <div class="card-info">
+                    <div class="card-title">嘉義原民嘉年華</div>
+                    <div class="card-sub">城市慶典展演</div>
+                </div>
+            </div>
+            <div class="card">
+                <div style="height:70%; background:#fa243c; display:flex; align-items:center; justify-content:center; color:white;"><i class="fas fa-video fa-3x"></i></div>
+                <div class="card-info">
+                    <div class="card-title">族語宣導影片</div>
+                    <div class="card-sub">文化記錄拍攝</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>藝術收藏 (Curated Collections)</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div style="background: #fdf2f2; border-radius: 12px; padding: 20px;">
+                <h4>傳統手作藝術</h4>
+                <p style="font-size: 0.9rem; margin-top: 10px;">擅長製作傳統魚叉、開山刀、背籠、皮帽。享受從備料到成品的成就感。</p>
+            </div>
+            <div style="background: #f2f7fd; border-radius: 12px; padding: 20px;">
+                <h4>編舞與創新</h4>
+                <p style="font-size: 0.9rem; margin-top: 10px;">積極參與編舞創新，曾走訪各村長老學習祈福舞步，轉化為當代舞台藝術。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>Savik | uongx yasiyungu - 2026 個人數位空間</p>
+    <p style="margin-top: 5px;">傳承鄒族文化，跳出屬於我們的節奏</p>
+</footer>
+
+</body>
+</html>
